@@ -9,9 +9,17 @@ def pedir_edad():
     return edad
 
 
+def comprbar_edad(edad):
+    if edad <18:
+        print("Usted no es mayor de edad.")
+    else:
+        print("Usted es mayor de edad.")
+    return 0
+
+
 def main():
     edad = pedir_edad()
-    print(edad)
+    comprbar_edad(edad)
 
     return 0
 
