@@ -9,10 +9,11 @@ def pedir_puntuacion():
     while puntuacion == 0.0 or puntuacion == 0.4 or puntuacion >= 0.6:
         return puntuacion
     print("**ERROR** Valor invalido")
+    comprobar_puntuacion(puntuacion)
 
 
 def comprobar_puntuacion(puntuacion):
-    if puntuacion == None:
+    while puntuacion == None:
         puntuacion = pedir_puntuacion()
     return puntuacion
 
