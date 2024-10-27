@@ -27,11 +27,22 @@ def comprobar_rendimiento(puntuacion):
     return rendimiento
 
 
+def calcular_bonus(puntuacion):
+    if puntuacion == 0.0:
+        bonus = 2400*0.0
+    elif puntuacion == 0.4:
+        bonus = 2400*0.4
+    else:
+        bonus = 2400*puntuacion
+    return bonus
+
+
 def main():
     puntuacion = pedir_puntuacion()
     puntuacion = comprobar_puntuacion(puntuacion)
     rendimiento = comprobar_rendimiento(puntuacion)
-    print (rendimiento)
+    bonus = calcular_bonus(puntuacion)
+    print (f"Su rendimiento es {rendimiento} por lo cual le corresponde un bonus de {bonus}€")
     return 0
 
 if __name__ == "__main__":
