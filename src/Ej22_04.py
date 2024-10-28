@@ -9,8 +9,21 @@ def pedir_num():
     return num
 
 
+def contar_cuenta_atras(num):
+    cuenta_atras = ""
+    espacio = ", "
+    for i in range(num, -1, -1):
+        if i == num:
+            cuenta_atras = cuenta_atras + str(i)
+        else:
+            cuenta_atras = cuenta_atras + espacio + str(i)
+    return cuenta_atras
+
+
 def main():
     num = pedir_num()
+    cuenta_atras = contar_cuenta_atras(num)
+    print(cuenta_atras)
     return 0
 
 if __name__ == "__main__":
