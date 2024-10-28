@@ -26,7 +26,7 @@ def main():
     num = pedir_num()
     impares = comprobar_impares(num)
 
-    print(impares)
+    print(f"Los Nº impares entre 1 y {num} son: \n{impares}")
     
     return 0
 
