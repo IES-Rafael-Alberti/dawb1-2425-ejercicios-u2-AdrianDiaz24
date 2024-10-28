@@ -11,7 +11,7 @@ def pedir_num():
 
 def comprobar_impares(num):
     impares = ""
-    espacio = " , "
+    espacio = ", "
     for i in range(1, num+1, +1):
         a = i%2
         if a != 0:
