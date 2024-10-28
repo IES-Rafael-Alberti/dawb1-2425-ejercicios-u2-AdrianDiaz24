@@ -9,8 +9,25 @@ def pedir_num():
     return num
 
 
+def comprobar_impares(num):
+    impares = ""
+    espacio = " , "
+    for i in range(1, num+1, +1):
+        a = i%2
+        if a != 0:
+            if   i == 1:
+                impares = str(impares) + str(i)
+            else:
+                impares = str(impares) + str(espacio) + str(i)
+    return impares
+
+
 def main():
     num = pedir_num()
+    impares = comprobar_impares(num)
+
+    print(impares)
+    
     return 0
 
 if __name__ == "__main__":
