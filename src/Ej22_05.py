@@ -28,7 +28,9 @@ def calcular_capital_o(inversion, interes, año):
     i = 0
     while i < año:
         capital_o = (inversion*(1+(interes/100)))
+        capital_o =  capital_o - inversion
         inversion = inversion + capital_o
+        i = i+1
     return capital_o
 
 
@@ -36,11 +38,13 @@ def main():
     inversion = pedir_inversion()
     interes = pedir_interes()
     años = pedir_años()
+    año = 1
 
-    for año in range(0, años, +1):
+    while año <= años:
         capital_o = calcular_capital_o(inversion, interes, año)
 
-        print(f"El {año}º año obtendras un capital de {capital_o}€")
+        print(f"El {año}º año obtendras un capital de {round(capital_o,2)}€")
+        año = año+1
 
     return 0
 
