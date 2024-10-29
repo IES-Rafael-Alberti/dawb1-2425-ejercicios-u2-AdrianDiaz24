@@ -20,13 +20,22 @@ def sumar_digitos(num) -> str:
     return suma
 
 
+def comprobar_paridad(num):
+    paridad = 0
+    if num%2 == 0:
+        paridad = paridad+1
+    return paridad
+
+
 def main():
     print("Introduce el -1 para cerrar el programa.")
     num = pedir_num()
     while num != -1:
+        paridad = comprobar_paridad(num)
         suma = sumar_digitos(num)
         print(f"La suma de los digitos del Nº dado es {suma}")
         num = pedir_num()
+    print(f"La cantidad de Nº pares introducidos por usted es de {paridad}.")
     return 0
 
 if __name__ == "__main__":
