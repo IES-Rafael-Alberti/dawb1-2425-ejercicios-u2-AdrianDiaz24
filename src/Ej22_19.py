@@ -12,12 +12,12 @@ def mostrar_menu():
 
 
 def programa_1():
-    print("Elegiste la opcion 1\nEjecutando el programa.\nEjecutando el programa..\nEjecutando el programa...\n **ERROR AL EJECUTAR EL PROGRAMA** ")
+    print("Elegiste la opcion 1\nEjecutando el programa.\nEjecutando el programa..\nEjecutando el programa...\n**ERROR AL EJECUTAR EL PROGRAMA**\nVolviendo al menu. ")
     return 0
 
 
 def listado():
-    print("Elegiste la opcion 2\nImprimiendo el listado.\nImprimiendo el listado..\nImprimiendo el listado...\n **ERROR AL IMPRIMIR EL LISTADO** ")
+    print("Elegiste la opcion 2\nImprimiendo el listado.\nImprimiendo el listado..\nImprimiendo el listado...\n**ERROR AL IMPRIMIR EL LISTADO**\nVolviendo al menu. ")
     return 0
 
 
@@ -27,11 +27,12 @@ def main():
     while num != 3:
         if num == 1:
             programa_1()
+            num = mostrar_menu()
         elif num == 2:
             listado()
+            num = mostrar_menu()
         else:
             print("salinedo...")
     return 0
-
 if __name__ == "__main__":
     main()
