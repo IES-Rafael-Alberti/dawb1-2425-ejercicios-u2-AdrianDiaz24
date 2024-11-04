@@ -30,7 +30,7 @@ def main():
         b = comprobar_caracter(i, frase, letra)
         if b == 1:
             print(f"Se ha enocntrado la letra {letra.upper()} en  el caracter Nº {i+1} de la frase")
-            continue
+            break
         else:
             print(f"No se ha encontrado la letra {letra.upper()}  en el caracter Nº {i+1} de la frase")
 
