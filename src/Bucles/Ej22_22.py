@@ -3,7 +3,7 @@
 # Al finalizar, informar la cantidad de dígitos pares y de dígitos impares leídos en total.
 
 
-def pedir_num() -> int:
+def pedir_num():
         num = str(input("Introduce un Nº entero: "))
         i = num.isdigit()
         while i == False or int(num) < 0:
