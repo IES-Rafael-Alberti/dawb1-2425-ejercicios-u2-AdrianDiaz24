@@ -10,12 +10,30 @@ def pedir_letra():
     while a > 1 or letra.isalpha() != True:
         letra = str(input("**ERROR** Introduce solo una letra: "))
         a  = len(letra)
-    return letra
+    return letra.lower()
+
+
+def comprobar_caracter(i:int, frase:str, letra:str):
+    if frase.lower()[i] == letra:
+        return 1
+    else:
+        return 0
 
 
 def main():
     frase = str(input("Introduce una frase: "))
     letra =  pedir_letra()
+
+
+    a = len(frase)
+    for i in range(0, a, +1):
+        b = comprobar_caracter(i, frase, letra)
+        if b == 1:
+            print(f"Se ha enocntrado la letra {letra.upper()} en  el caracter Nº {i+1} de la frase")
+            continue
+        else:
+            print(f"No se ha encontrado la letra {letra.upper()}  en el caracter Nº {i+1} de la frase")
+
     
     return 0
 
