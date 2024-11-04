@@ -8,28 +8,32 @@
 
 def pedir_precio():
     precio = float(input("Introduce el precio de la compra: "))
+    # a = precio.isdigit()
+    # while a == False:
+        # precio = str(input("**ERROR** Introduce el precio de la compra: "))
+        # a = precio.isdigit()
+        # Intente que pueda introducir cualquier cosa y solo pasara cuando sea un Nº entero pero hay problemas con el "." y el isdigit
+        # y la otra forma seria con las excepciones pero aun no he llegado a eso. 
     return precio
 
 
 def main():
     precio_f = 0
     while True:
-        precio = pedir_precio()
+        precio = float(pedir_precio())
         if precio < 0:
             continue
         elif precio >= 0:
             if precio == 0:
                 if precio_f <= 1000:
-                    print(f"Total a pagar: {precio_f}")
+                    print(f"Total a pagar: {precio_f}€")
                     break
                 else: 
-                    precio_f = precio_f*0.90
-                    print(f"Total a pagar: {precio_f}")
+                    precio_f2 = float(precio_f*0.90)
+                    print(f"Total: {precio_f}€ \nDescuento: 10% \nTotal a pagar:{precio_f2.__round__(2)}€")
                     break
             else:
-                precio_f = precio_f+precio
-        
-
+                precio_f = precio_f.__round__(2)+precio.__round__(2)
     return 0
 
 if __name__ == "__main__": 
