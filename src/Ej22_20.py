@@ -4,8 +4,19 @@
 # ejecución.
 
 
-def main():
+def pedir_letra():
+    letra = str(input("Introducec una letra: "))
+    a = len(letra)
+    while a > 1 or letra.isalpha() != True:
+        letra = str(input("**ERROR** Introduce solo una letra: "))
+        a  = len(letra)
+    return letra
 
+
+def main():
+    frase = str(input("Introduce una frase: "))
+    letra =  pedir_letra()
+    
     return 0
 
 if __name__ == "__main__":
