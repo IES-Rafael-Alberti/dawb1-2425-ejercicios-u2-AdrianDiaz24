@@ -58,7 +58,7 @@ def salir():
 
 def main():
     num = mostrar_menu()
-    while num != 3:
+    while True:
         if num == 1:
             programa_1()
             num = mostrar_menu()
@@ -67,6 +67,6 @@ def main():
             num = mostrar_menu()
         elif  num == 3:
             salir()
-    return 0
+            break
 if __name__ == "__main__":
     main()
