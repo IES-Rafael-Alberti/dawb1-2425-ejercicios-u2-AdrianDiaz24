@@ -4,3 +4,11 @@
 # considera que termina una línea. Por cada línea completa, informar cuántos dígitos
 #  numéricos (del 0 al 9) aparecieron en total (en todos los títulos de libros que 
 # componen en esa línea). Finalmente, informar cuántas líneas completas se ingresaron.
+
+
+def main():
+
+    return 0
+
+if __name__ == "__main__":
+    main()
