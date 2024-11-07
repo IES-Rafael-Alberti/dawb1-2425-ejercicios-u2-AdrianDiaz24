@@ -5,8 +5,12 @@
 
 def main():
     a = [8, 3, 1, 19, 14]
+    i = 0
     b = len(a)
-    print(b)
+    for i in range(0, b-1-i, +1):
+        for j in range(0, b-1-i, +1):
+            if a[j] > a[j+1]:
+                a[j], a[j+1] = a[j+1], a[j]
     return
 
 if __name__ == "__main__":
