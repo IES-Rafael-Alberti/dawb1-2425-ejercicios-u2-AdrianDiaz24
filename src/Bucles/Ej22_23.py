@@ -5,6 +5,8 @@
 #  numéricos (del 0 al 9) aparecieron en total (en todos los títulos de libros que 
 # componen en esa línea). Finalmente, informar cuántas líneas completas se ingresaron.
 
+import time
+
 
 def comprobar_cadena(cadena:str):
     contador = 0
@@ -26,16 +28,27 @@ def comprobar_cadena(cadena:str):
 
 
 def salir():
-
+    print("Saliendo.")
+    time.sleep(1)
+    print("Saliendo..")
+    time.sleep(1)
+    print("Saliendo...")
+    time.sleep(1)
+    exit
     return 0
 
 
 def main():
-
+    contador = 0
     while True:
         cadena = str(input("Introduce el titulo de un libro: "))
-        i = comprobar_cadena(cadena)
-        print(i)
+        if cadena == "/":
+            print(f"Linea completa: Aparecen {contador} digitos numericos")
+            contador = 0
+        else:
+            i = comprobar_cadena(cadena)
+            contador += i
+        
     return 0
 
 if __name__ == "__main__":
