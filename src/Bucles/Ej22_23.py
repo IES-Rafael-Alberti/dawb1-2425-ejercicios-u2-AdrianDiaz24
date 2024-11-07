@@ -11,31 +11,19 @@ import time
 def comprobar_cadena(cadena:str):
     contador = 0
     i = 0
-    if cadena == "*":
-        salir()
-    else:
-        long = len(cadena)
-        while contador < 10 and i != long-1:
-            for i in range(0, long, +1):
-                comprobacion = cadena[i].isdigit()
-                if comprobacion == False:
-                    continue
-                elif comprobacion == True:
-                    contador += 1
-                elif i == long:
-                    return contador 
+
+    long = len(cadena)
+    while contador < 10 and i != long-1:
+        for i in range(0, long, +1):
+            comprobacion = cadena[i].isdigit()
+            if comprobacion == False:
+                continue
+            elif comprobacion == True:
+                contador += 1
+            elif i == long:
+                return contador 
     return contador
 
-
-def salir():
-    print("Saliendo.")
-    time.sleep(1)
-    print("Saliendo..")
-    time.sleep(1)
-    print("Saliendo...")
-    time.sleep(1)
-    exit
-    return 0
 
 
 def main():
@@ -43,8 +31,21 @@ def main():
     while True:
         cadena = str(input("Introduce el titulo de un libro: "))
         if cadena == "/":
-            print(f"Linea completa: Aparecen {contador} digitos numericos")
-            contador = 0
+            if contador < 10:
+                print(f"Linea completa: Aparecen {contador} digitos numericos")
+                contador = 0
+            else:
+                contador = 9
+                print(f"Linea completa: Aparecen {contador} digitos numericos")
+                contador = 0
+        elif cadena == "*":
+                print("\nSaliendo.")
+                time.sleep(1)
+                print("Saliendo..")
+                time.sleep(1)
+                print("Saliendo...\n")
+                time.sleep(1)
+                break
         else:
             i = comprobar_cadena(cadena)
             contador += i
