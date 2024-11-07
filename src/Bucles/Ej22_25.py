@@ -24,6 +24,8 @@ def comprobar_num_palabras(frase):
 
 def main():
     frase = str(input("Introduce una frase: "))
+    while frase == "":
+        frase = str(input("**ERROR** Campo no rellenado.\nIntroduce una frase: "))
     palabra_larga = comprobar_palabras(frase)
     num_palabras = comprobar_num_palabras(frase)
 
