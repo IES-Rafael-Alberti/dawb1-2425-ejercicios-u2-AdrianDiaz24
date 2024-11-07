@@ -28,17 +28,20 @@ def comprobar_cadena(cadena:str):
 
 def main():
     contador = 0
+    contador_f = 0
     while True:
         cadena = str(input("Introduce el titulo de un libro: "))
         if cadena == "/":
+            contador_f += 1
             if contador < 10:
-                print(f"Linea completa: Aparecen {contador} digitos numericos")
+                print(f"\nLinea completa: Aparecen {contador} digitos numericos\n")
                 contador = 0
             else:
-                contador = 9
-                print(f"Linea completa: Aparecen {contador} digitos numericos")
+                print("\nLinea completa: Aparecen 9 digitos numericos\n")
                 contador = 0
         elif cadena == "*":
+                print(f"\nFin: Se leyeron {contador_f} lineas completas.\n")
+                time.sleep(1)
                 print("\nSaliendo.")
                 time.sleep(1)
                 print("Saliendo..")
