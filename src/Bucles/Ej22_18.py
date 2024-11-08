@@ -10,7 +10,7 @@ def pedir_num():
     return num
 
 
-def sumar_digitos(num) -> str:
+def sumar_digitos(num):
     a = len(str(num))
     num = str(num)
     suma = 0
