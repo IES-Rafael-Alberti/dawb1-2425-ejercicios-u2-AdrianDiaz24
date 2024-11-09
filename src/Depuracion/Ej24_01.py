@@ -7,10 +7,10 @@ def ordenar_lista(lista):
     """_summary_
 
     Args:
-        lista (array): La lista escrita por el usuario con el orden original
+        lista (list): La lista escrita por el usuario con el orden original
 
     Returns:
-        array: La lista ordenada de menor a mayor
+        list: La lista ordenada de menor a mayor
     """
     i = 0
     b = len(lista)
@@ -21,8 +21,24 @@ def ordenar_lista(lista):
     return lista
 
 
+def pedir_lista():
+    """Esto te pide 10 numeros para ingresarlo a la lista que hay que ordenar
+
+    Returns:
+        list: Te devuelve la lista introducida por el usuario sin ordenar
+    """
+    lista = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    for i in range(0, 10, +1):
+        num = int(input(f"Introduce el Nº {i+1} de 10: "))
+        lista[i] = num
+
+    return lista
+
+
 def main():
-    lista = [8, 3, 1, 19, 14, 50, 2, 71, 4, 22, 39]
+
+    lista = pedir_lista()
+    print(f"\nLa lista desordenada es {lista}\n")
     lista = ordenar_lista(lista)
     print(f"La lista ordenada es {lista}")
     return
