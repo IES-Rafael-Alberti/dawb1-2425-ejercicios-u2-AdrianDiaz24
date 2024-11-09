@@ -18,7 +18,6 @@ def comprobar_primo(num):
                 a = a+1
             else:
                 a = a
-        print(a)
         if a == 2:
             primo = "es primo"        
         else:
